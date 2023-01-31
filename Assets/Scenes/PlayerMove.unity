@@ -586,12 +586,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!212 &1320448480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -686,7 +686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72d2eb29d202b342aa67f899ff09428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 50
+  xMaxSpeed: 50
+  yMaxSpeed: 0
   jumpForce: 2
 --- !u!114 &1320448484
 MonoBehaviour:
@@ -701,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: b5d37d16f7f52f446ab09d7ef496706a, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -712,10 +714,42 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1320448483}
+        m_TargetAssemblyTypeName: TinySeedMovement, Assembly-CSharp
+        m_MethodName: JumpOnperformed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 935f2451-05af-4042-9cdd-336fb920beed
+    m_ActionName: Main/Jump
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1320448483}
+        m_TargetAssemblyTypeName: TinySeedMovement, Assembly-CSharp
+        m_MethodName: MoveLROnperformed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 24f90a60-90c0-4f09-af3f-f3d53556b3f5
+    m_ActionName: Main/MoveLR
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerInputs
+  m_DefaultActionMap: Main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1421494333
