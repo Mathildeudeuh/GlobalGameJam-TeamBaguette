@@ -689,7 +689,7 @@ MonoBehaviour:
   speed: 50
   xMaxSpeed: 50
   yMaxSpeed: 0
-  jumpForce: 2
+  jumpForce: 10
 --- !u!114 &1320448484
 MonoBehaviour:
   m_ObjectHideFlags: 0
