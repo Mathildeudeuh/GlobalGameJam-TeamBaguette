@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c331e288d37e144d88cff83db7736b5, type: 3}
+  m_Name: New Dialogues SO
+  m_EditorClassIdentifier: 
+  dialogues:
+  - "Cole the Mole: What happened? Oh my goodness, I can\u2019t see anything. I\u2019m
+    too old for this. Uh, uh all right, my glasses, where are my glasses OH HELLO?
+    CAN ANYONE HEAR ME?! "
+  - 'Seedney: Of course, ma''am! You need help. '
+  - "Cole the Mole: You were her from the beginning? *Talks to herself* Anw 238 years
+    old, and you couldn\u2019t notice someone was nearby. Can you help me find my
+    glasses, sweetie? "
+  - 'Bring back the glasses. '
+  - Stop now
