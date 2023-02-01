@@ -9,7 +9,6 @@ public class TinySeedMovement: MonoBehaviour
     [SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
     [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
 
-    [SerializeField] private GameObject ui;
 
     /* declaration des variables private de ma class player */
     private float direction;                                                                           // flag qui permet de savoir si on se deplace (!=0) et dans quel sens <0 a gauche >0 adroite      
@@ -75,7 +74,7 @@ public class TinySeedMovement: MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-        else
+        else if (direction < 0)
         {
             spriteRenderer.flipX = true;
         }
@@ -92,14 +91,5 @@ public class TinySeedMovement: MonoBehaviour
             rb2D.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             canJump = false;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("PNJ"))
-        {
-            ui.SetActive(true);
-        }
-
     }
 }
