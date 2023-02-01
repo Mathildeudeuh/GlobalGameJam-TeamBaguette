@@ -1,5 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;                        //rajoute les inputS. (pakage manager)                                                                              
+using UnityEngine.InputSystem;                        //rajoute les inputS. (pakage manager)
+                                                      //
+//using System.Collections.Generic;
+
 public class TinySeedMovement: MonoBehaviour
 {
 
@@ -9,6 +12,7 @@ public class TinySeedMovement: MonoBehaviour
     [SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
     [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
 
+    //private Dictionary<string, bool> inventaire;
 
     /* declaration des variables private de ma class player */
     private float direction;                                                                           // flag qui permet de savoir si on se deplace (!=0) et dans quel sens <0 a gauche >0 adroite      
@@ -16,14 +20,14 @@ public class TinySeedMovement: MonoBehaviour
 
     /* declaration des composants unity gerant le comportement du player */                                                                                                              
     private Rigidbody2D rb2D;                                                                // gestionnaire comportement physique du player                                                                          // gestion de transition des etats de l'animation    
-    private SpriteRenderer spriteRenderer;                                                                                                                                                    
+    private SpriteRenderer spriteRenderer;
 
+    //public Dictionary<global::System.String, global::System.Boolean> Inventaire { get => inventaire; set => inventaire = value; }
 
     void Start()
     {                                                 // initialisation des composants
         rb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
 
 
@@ -49,11 +53,18 @@ public class TinySeedMovement: MonoBehaviour
 
     }
 
+    /*private void OnTriggerEnter2D(Collider2D col)                                             // Evenement déclancher à la collision
+    {
+        Debug.Log("Quest 1!");
+       
+
+    }*/
 
     private void OnCollisionEnter2D(Collision2D col)                                             // Evenement déclancher à la collision
     {
-
+        
         canJump = true;
+
 
     }
 
