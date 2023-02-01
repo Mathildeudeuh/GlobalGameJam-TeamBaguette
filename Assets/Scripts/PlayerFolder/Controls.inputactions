@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "New action",
+                    "name": "SelectDialogue",
                     "type": "Button",
                     "id": "6a5240d3-0194-4b25-8167-6a5abbb94715",
                     "expectedControlType": "Button",
@@ -78,16 +78,28 @@
                 {
                     "name": "",
                     "id": "d75271ce-d373-4e4f-b4c6-e5aea07ffe4c",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "SelectDialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
