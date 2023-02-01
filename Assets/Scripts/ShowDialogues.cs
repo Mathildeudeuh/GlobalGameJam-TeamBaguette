@@ -22,16 +22,17 @@ public class ShowDialogues : MonoBehaviour
         texte.text = dialoguesSO.dialogues[dialogueLine].ToString();
     }
 
-    /*public void NextLine()
+    public void NextLine()
     {
         if (isSpeaking == true && dialogueLine != dialoguesSO.dialogues.Length - 1)
         {
             dialogueLine++;
             texte.text = dialoguesSO.dialogues[dialogueLine].ToString();
         }
-        else if(isSpeaking == true && dialogueLine == dialoguesSO.dialogues.Length -1)
+
+        else if (isSpeaking == true && dialogueLine == dialoguesSO.dialogues.Length -1)
         {
             isSpeaking = false;
         }
-    }*/
+    }
 }
