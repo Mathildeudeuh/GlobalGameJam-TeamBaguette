@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1053495277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1457517451}
   - component: {fileID: 1457517450}
   m_Layer: 0
-  m_Name: Bubble_comic (1)
+  m_Name: PNJ
   m_TagString: PNJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1180,6 +1180,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6461765932251612561, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1053495276}
+    - target: {fileID: 6461765932251612561, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: speed
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461765932251612561, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461765932251612561, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: xMaxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461765932251612562, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6461765932251612563, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1227,6 +1247,14 @@ PrefabInstance:
     - target: {fileID: 6461765932251612588, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
       propertyPath: m_Name
       value: TinySeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461765932251612589, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461765932688227405, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893c63ccc180dfe4682554b1e5c39ff4, type: 3}
