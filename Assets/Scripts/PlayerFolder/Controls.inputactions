@@ -20,7 +20,6 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
-
                 },
                 {
                     "name": "SelectDialogue",
@@ -28,7 +27,7 @@
                     "id": "6a5240d3-0194-4b25-8167-6a5abbb94715",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -75,31 +74,25 @@
                     "action": "MoveLR",
                     "isComposite": false,
                     "isPartOfComposite": true
-
                 },
                 {
                     "name": "",
                     "id": "d75271ce-d373-4e4f-b4c6-e5aea07ffe4c",
                     "path": "<Keyboard>/s",
-                    "interactions": "Press(behavior=1)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "SelectDialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
-
                 }
             ]
         }
     ],
     "controlSchemes": [
         {
-
             "name": "New control scheme",
             "bindingGroup": "New control scheme",
-            "name": "Keyboard",
-            "bindingGroup": "Keyboard",
-
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
