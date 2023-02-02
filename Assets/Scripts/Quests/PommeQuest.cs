@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class peperoniQuest : MonoBehaviour
+public class PommeQuest : MonoBehaviour
 {
 
-
-    private GameObject Wall_01;
-
+    public bool pomme;
     private void Start()
     {
        
@@ -21,8 +19,7 @@ public class peperoniQuest : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("COLLISIONNED");
 
-            Wall_01 = GameObject.FindGameObjectWithTag("ColliderQuest_1");
-            DestroyObject(Wall_01);
+            pomme = true;
   
 
         }
