@@ -6,13 +6,15 @@ using UnityEngine.InputSystem;
 
 public class ShowDialogues : MonoBehaviour
 {
-    public DialoguesSO dialoguesSO;
-    public bool isSpeaking;
-    public TextMeshProUGUI texte;
-    public float textSpeed;
-    public int dialogueLine;
     public GameObject dialogueBox;
+    public TextMeshProUGUI texte;
+    public DialoguesSO dialoguesSO;
+    public int dialogueLine;
+    public float textSpeed;
     
+
+    //public bool isSpeaking;
+    //private bool wantToTalk = false;
 
 
     private void Start()
@@ -48,17 +50,14 @@ public class ShowDialogues : MonoBehaviour
         if (dialogueLine < dialoguesSO.dialogues.Length - 1)
         {
             dialogueLine++;
-            //dialogueLine = 0;
+            texte.text = string.Empty;
             StartCoroutine(TypeLine());
         }
 
         else
         {
-            dialogueBox.SetActive(false);
+            //dialogueBox.SetActive(false);
         }
-
-
-
 
         /*if (isSpeaking == true && dialogueLine != dialoguesSO.dialogues.Length - 1)
         {

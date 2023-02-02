@@ -79,7 +79,7 @@
                     "name": "",
                     "id": "d75271ce-d373-4e4f-b4c6-e5aea07ffe4c",
                     "path": "<Keyboard>/s",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "SelectDialogue",
