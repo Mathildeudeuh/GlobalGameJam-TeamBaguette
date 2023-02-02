@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialoguesWithPNJ : MonoBehaviour
 {
-    public bool isPNJ;
-    public Transform checkPNJ;
-    public LayerMask whatIsPNJ;
+    /*public bool isPNJ;
+    public bool wantToTalk;
     [SerializeField] private GameObject conversationBox;
 
     void Start()
     {
-        
+        isPNJ = false;
+        wantToTalk = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,10 +27,15 @@ public class DialoguesWithPNJ : MonoBehaviour
         isPNJ = false;
     }
 
+    public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
+    {
+        wantToTalk = true;
+    }
+
 
     void Update()
     {
-        if (isPNJ == true && Input.GetKeyDown(KeyCode.S) == true) //public void JumpOnperformed(InputAction.CallbackContext obj) -> booléen = true
+        if (isPNJ == true && wantToTalk == true)
         {
             conversationBox.SetActive(true);
 
@@ -43,5 +49,5 @@ public class DialoguesWithPNJ : MonoBehaviour
                 GetComponent<ShowDialogues>().StartDialogue();
             }
         }
-    }
+    }*/
 }
