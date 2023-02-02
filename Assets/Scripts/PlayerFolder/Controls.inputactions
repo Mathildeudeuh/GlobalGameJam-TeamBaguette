@@ -20,6 +20,7 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+
                 },
                 {
                     "name": "SelectDialogue",
@@ -74,6 +75,7 @@
                     "action": "MoveLR",
                     "isComposite": false,
                     "isPartOfComposite": true
+
                 },
                 {
                     "name": "",
@@ -85,14 +87,19 @@
                     "action": "SelectDialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
+
                 }
             ]
         }
     ],
     "controlSchemes": [
         {
+
+            "name": "New control scheme",
+            "bindingGroup": "New control scheme",
             "name": "Keyboard",
             "bindingGroup": "Keyboard",
+
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
