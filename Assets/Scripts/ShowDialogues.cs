@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class ShowDialogues : MonoBehaviour
 {
@@ -21,12 +22,8 @@ public class ShowDialogues : MonoBehaviour
         //isSpeaking = false;
     }
 
-
-    public void StartDialogue()
+    private void Update()
     {
-        dialogueLine = 0;
-        StartCoroutine(TypeLine());
-        //texte.text = dialoguesSO.dialogues[dialogueLine].ToString();
     }
 
     IEnumerator TypeLine()
@@ -38,12 +35,20 @@ public class ShowDialogues : MonoBehaviour
         }
     }
 
+    public void StartDialogue()
+    {
+        dialogueLine = 0;
+        StartCoroutine(TypeLine());
+        //texte.text = dialoguesSO.dialogues[dialogueLine].ToString();
+    }
+
+
     public void NextLine()
-    {     
+    {
         if (dialogueLine < dialoguesSO.dialogues.Length - 1)
         {
             dialogueLine++;
-            dialogueLine = 0;
+            //dialogueLine = 0;
             StartCoroutine(TypeLine());
         }
 
@@ -65,8 +70,20 @@ public class ShowDialogues : MonoBehaviour
         {
             isSpeaking = false;
         }*/
+    }
 
 
+    public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
+    {
+        if (texte.text == dialoguesSO.dialogues[dialogueLine])
+        {
+            NextLine();
+        }
 
+        else
+        {
+            StopAllCoroutines();
+            texte.text = dialoguesSO.dialogues[dialogueLine];
+        }
     }
 }
