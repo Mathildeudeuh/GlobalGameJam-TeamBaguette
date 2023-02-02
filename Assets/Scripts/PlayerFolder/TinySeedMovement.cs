@@ -9,7 +9,6 @@ public class TinySeedMovement: MonoBehaviour
     [SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
     [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
 
-
     /* declaration des variables private de ma class player */
     private float direction;                                                                           // flag qui permet de savoir si on se deplace (!=0) et dans quel sens <0 a gauche >0 adroite      
     private bool canJump = false;                                                                     // flag pr savoir si on px sauter(v)                                                                
@@ -92,4 +91,6 @@ public class TinySeedMovement: MonoBehaviour
             canJump = false;
         }
     }
+
+  
 }
