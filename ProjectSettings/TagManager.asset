@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - PNJ
+
+
   - Souvenir
   - ColliderQuest_1
+
+  - ColliderCam
   layers:
   - Default
   - TransparentFX

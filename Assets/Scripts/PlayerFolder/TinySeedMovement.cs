@@ -10,9 +10,12 @@ public class TinySeedMovement: MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float xMaxSpeed;                                                         // limitation de la vitesse en courant                                                                          
     [SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
-    [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
+    [SerializeField] private float jumpForce;                                                         // force donnÃ©e au saut                                                                            
+
+
 
     //private Dictionary<string, bool> inventaire;
+
 
     /* declaration des variables private de ma class player */
     private float direction;                                                                           // flag qui permet de savoir si on se deplace (!=0) et dans quel sens <0 a gauche >0 adroite      
@@ -33,7 +36,7 @@ public class TinySeedMovement: MonoBehaviour
 
     private void FixedUpdate()
     {
-        /* event declenché a chaque changement de frame du sprite, on va s'en servir pour gerer la limite de vitesse  */
+        /* event declenchÃ© a chaque changement de frame du sprite, on va s'en servir pour gerer la limite de vitesse  */
         /* recup de la vitesse du player : rigidbody2D.velocity.x (>0 a droite <0 a gauche)                           */
         /* on check que abs( rigidbody2D.velocity.x ) est inferieur a vitesse limite que l'on impose                  */
         /* si vitesse inferieur a limite                                                                              */
@@ -53,14 +56,14 @@ public class TinySeedMovement: MonoBehaviour
 
     }
 
-    /*private void OnTriggerEnter2D(Collider2D col)                                             // Evenement déclancher à la collision
+    /*private void OnTriggerEnter2D(Collider2D col)                                             // Evenement dÃ©clancher Ã  la collision
     {
         Debug.Log("Quest 1!");
        
 
     }*/
 
-    private void OnCollisionEnter2D(Collision2D col)                                             // Evenement déclancher à la collision
+    private void OnCollisionEnter2D(Collision2D col)                                             // Evenement dÃ©clancher Ã  la collision
     {
         
         canJump = true;
@@ -70,9 +73,9 @@ public class TinySeedMovement: MonoBehaviour
 
     public void MoveLROnperformed(InputAction.CallbackContext obj)                            // MoveOnperformed-> player non statique direction !=(different) 0
     {
-        /* qd la touche < ou > est appuyée la direction devient non null                */
+        /* qd la touche < ou > est appuyÃ©e la direction devient non null                */
         /* si la  direction est plus grande que 0, le sprite en forme normal (pas FLip) */
-        /* sinon on l'inverse (le sprite est Flippé)    
+        /* sinon on l'inverse (le sprite est FlippÃ©)    
          * */
         if (obj.canceled)
         {
@@ -103,4 +106,6 @@ public class TinySeedMovement: MonoBehaviour
             canJump = false;
         }
     }
+
+  
 }
