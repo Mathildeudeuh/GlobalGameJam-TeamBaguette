@@ -10,8 +10,8 @@ public class TinySeedMovement: MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float xMaxSpeed;                                                         // limitation de la vitesse en courant                                                                          
     //[SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
-    [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
-
+    [SerializeField] private float jumpForce;                                                        // force donnée au saut                                                                            
+    private Animator animator;
 
 
     //private Dictionary<string, bool> inventaire;
@@ -31,6 +31,8 @@ public class TinySeedMovement: MonoBehaviour
     {                                                 // initialisation des composants
         rb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        //animator.SetBool("IsWalking", false);
     }
 
 
@@ -48,7 +50,7 @@ public class TinySeedMovement: MonoBehaviour
         if (horizontalSpeed < xMaxSpeed)
             rb2D.AddForce(new Vector2(speed * direction, 0));
 
-
+        animator.SetFloat("Walking", rb2D.velocity.x);
 
         var verticalSpeed = Mathf.Abs(rb2D.velocity.y);
         /*if (verticalSpeed < yMaxSpeed)
@@ -65,8 +67,9 @@ public class TinySeedMovement: MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)                                             // Evenement déclancher à la collision
     {
-        
+
         canJump = true;
+        animator.SetBool("IsJumping", false);
 
 
     }
@@ -77,14 +80,13 @@ public class TinySeedMovement: MonoBehaviour
         /* si la  direction est plus grande que 0, le sprite en forme normal (pas FLip) */
         /* sinon on l'inverse (le sprite est Flippé)    
          * */
-
-        Debug.Log("RUN");
-        if (obj.canceled)
-        {
-            direction = 0;
-            return;
-        }
+       
         direction = obj.ReadValue<float>();
+
+        
+        //animator.SetBool("IsWalking", true);
+        
+
 
         if (direction > 0)
         {
@@ -96,16 +98,26 @@ public class TinySeedMovement: MonoBehaviour
         }
     }
 
+    public void MoveLROncanceled(InputAction.CallbackContext obj)
+    {
+        direction = 0;
+        if (obj.canceled)
+        {
+            direction = 0;
+            //animator.SetBool("IsWalking", false);
+            return;
+        }
+    }
 
 
     public void JumpOnperformed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Je saute !");
         
         if (canJump)
         {
             rb2D.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             canJump = false;
+            animator.SetBool("IsJumping", true);
         }
     }
 
