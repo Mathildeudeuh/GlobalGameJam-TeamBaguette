@@ -9,7 +9,7 @@ public class TinySeedMovement: MonoBehaviour
     /* declaration des attributs de ma class player accessible a unity [SerializeField] */
     [SerializeField] private float speed;
     [SerializeField] private float xMaxSpeed;                                                         // limitation de la vitesse en courant                                                                          
-    [SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
+    //[SerializeField] private float yMaxSpeed;                                                         // limitation de la vitesse vertical pour limiter la hauteur de saut                              
     [SerializeField] private float jumpForce;                                                         // force donnée au saut                                                                            
 
 
@@ -51,8 +51,8 @@ public class TinySeedMovement: MonoBehaviour
 
 
         var verticalSpeed = Mathf.Abs(rb2D.velocity.y);
-        if (verticalSpeed < yMaxSpeed)
-            rb2D.AddForce(new Vector2(0, speed));
+        /*if (verticalSpeed < yMaxSpeed)
+            rb2D.AddForce(new Vector2(0, speed));*/
 
     }
 
@@ -77,6 +77,8 @@ public class TinySeedMovement: MonoBehaviour
         /* si la  direction est plus grande que 0, le sprite en forme normal (pas FLip) */
         /* sinon on l'inverse (le sprite est Flippé)    
          * */
+
+        Debug.Log("RUN");
         if (obj.canceled)
         {
             direction = 0;
