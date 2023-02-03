@@ -18,6 +18,7 @@ public class SouvenirPNJ_01 : MonoBehaviour
         if (pommeQuest.pomme == true) 
         {
             SpawnSouvenirs();
+            pommeQuest.pomme = false;   
   
 
         }
