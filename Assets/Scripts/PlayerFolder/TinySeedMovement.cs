@@ -83,17 +83,17 @@ public class TinySeedMovement: MonoBehaviour
        
         direction = obj.ReadValue<float>();
 
-        
-        //animator.SetBool("IsWalking", true);
-        
 
+        //animator.SetBool("IsWalking", true);
 
         if (direction > 0)
         {
+            animator.SetFloat("Walking", rb2D.velocity.x);
             spriteRenderer.flipX = false;
         }
         else if (direction < 0)
         {
+            animator.SetFloat("Walking", rb2D.velocity.x);
             spriteRenderer.flipX = true;
         }
     }
