@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7459bdb4842c9d144831314dffcc79ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Florie
+  gameSceneName: Game
 --- !u!1 &933949951
 GameObject:
   m_ObjectHideFlags: 0
