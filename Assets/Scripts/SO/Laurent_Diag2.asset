@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c331e288d37e144d88cff83db7736b5, type: 3}
   m_Name: Laurent_Diag2
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - "Oh, thank you. I was so afraid, If I lose my family, I am nothing, We need each
+    other.\" So remember Seedney :\u2026"
+  - '                                                                                              '

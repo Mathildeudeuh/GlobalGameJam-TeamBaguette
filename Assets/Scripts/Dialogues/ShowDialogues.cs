@@ -10,9 +10,20 @@ public class ShowDialogues : MonoBehaviour
     public TextMeshProUGUI texte;
     public DialoguesSO dialoguesSO;
     public DialoguesSO dialoguesSO2;
+    //private GlassesQuest glassesQuest;
+    public bool glasses;
     public int dialogueLine;
-    public float textSpeed;
+    public float textSpeed;    
 
+
+    private void Start()
+    {
+       //glassesQuest = GetComponent<GlassesQuest>();
+    }
+
+    private void Update()
+    {
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,18 +35,9 @@ public class ShowDialogues : MonoBehaviour
         }
     }
 
-
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-    }
-
     IEnumerator TypeLine()
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (glasses == false)
         {
             foreach (char c in dialoguesSO.dialogues[dialogueLine].ToCharArray())
             {
@@ -44,7 +46,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (glasses == true)
         {
             foreach (char c in dialoguesSO2.dialogues[dialogueLine].ToCharArray())
             {
@@ -64,7 +66,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void NextLine()
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (glasses == false)
         {
             if (dialogueLine < dialoguesSO.dialogues.Length - 1)
             {
@@ -79,7 +81,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (glasses == true)
         {
             if (dialogueLine < dialoguesSO2.dialogues.Length - 1)
             {
@@ -100,7 +102,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (glasses == false)
         {
             if (texte.text == dialoguesSO.dialogues[dialogueLine])
             {
@@ -114,7 +116,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (glasses == true)
         {
             if (texte.text == dialoguesSO2.dialogues[dialogueLine])
             {

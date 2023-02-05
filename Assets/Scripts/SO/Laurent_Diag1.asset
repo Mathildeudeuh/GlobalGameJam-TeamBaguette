@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c331e288d37e144d88cff83db7736b5, type: 3}
   m_Name: Laurent_Diag1
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - "Oh no, I lost it, where is it, where is it? I can\u2019t find it! The queen
+    is going to turn red if I don\u2019t bring anything back."
+  - '                                                                                          '
+  - I'll probably live alone now, with no friends, no family, no home, no queen to
+    serve, no duty, no honor, no life.
+  - '                                                                                          '
+  - "If only I could bring something to the queen\u2026 * starts crying *"
+  - '                                                                                          '
