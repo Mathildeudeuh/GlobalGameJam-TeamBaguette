@@ -6,6 +6,7 @@ public class GlassesQuest : MonoBehaviour
 {
 
     public bool glasses;
+
     private void Start()
     {
        
