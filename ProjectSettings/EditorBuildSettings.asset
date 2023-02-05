@@ -12,7 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 980c5626057e30d48b521278800df0b9
   - enabled: 1
-    path: Assets/Scenes/Florie.unity
+    path: Assets/Scenes/Game.unity
     guid: ab861eae7892ff24f812a674462494c8
+  - enabled: 1
+    path: Assets/Scenes/Autumn.unity
+    guid: ffa6a64ab85759543acf926312e97b98
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4b9b8cc751ff2094fb61bae97296064a, type: 2}
