@@ -4,26 +4,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class ShowDialogues : MonoBehaviour
+public class Laurent_ShowDialogues : MonoBehaviour
 {
     public GameObject dialogueBox;
     public TextMeshProUGUI texte;
     public DialoguesSO dialoguesSO;
     public DialoguesSO dialoguesSO2;
-    //private GlassesQuest glassesQuest;
-    public bool glasses;
     public int dialogueLine;
-    public float textSpeed;    
+    public float textSpeed;
 
-
-    private void Start()
-    {
-       //glassesQuest = GetComponent<GlassesQuest>();
-    }
-
-    private void Update()
-    {
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,9 +24,18 @@ public class ShowDialogues : MonoBehaviour
         }
     }
 
+
+    private void Start()
+    {
+    }
+
+    private void Update()
+    {
+    }
+
     IEnumerator TypeLine()
     {
-        if (glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             foreach (char c in dialoguesSO.dialogues[dialogueLine].ToCharArray())
             {
@@ -46,7 +44,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             foreach (char c in dialoguesSO2.dialogues[dialogueLine].ToCharArray())
             {
@@ -66,7 +64,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void NextLine()
     {
-        if (glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             if (dialogueLine < dialoguesSO.dialogues.Length - 1)
             {
@@ -81,7 +79,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             if (dialogueLine < dialoguesSO2.dialogues.Length - 1)
             {
@@ -102,7 +100,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
     {
-        if (glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             if (texte.text == dialoguesSO.dialogues[dialogueLine])
             {
@@ -116,7 +114,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             if (texte.text == dialoguesSO2.dialogues[dialogueLine])
             {
