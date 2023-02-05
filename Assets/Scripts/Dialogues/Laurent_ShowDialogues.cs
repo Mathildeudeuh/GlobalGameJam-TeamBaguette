@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class ShowDialogues : MonoBehaviour
+public class Laurent_ShowDialogues : MonoBehaviour
 {
     public GameObject dialogueBox;
     public TextMeshProUGUI texte;
@@ -35,7 +35,7 @@ public class ShowDialogues : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             foreach (char c in dialoguesSO.dialogues[dialogueLine].ToCharArray())
             {
@@ -44,7 +44,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             foreach (char c in dialoguesSO2.dialogues[dialogueLine].ToCharArray())
             {
@@ -64,7 +64,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void NextLine()
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             if (dialogueLine < dialoguesSO.dialogues.Length - 1)
             {
@@ -79,7 +79,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             if (dialogueLine < dialoguesSO2.dialogues.Length - 1)
             {
@@ -100,7 +100,7 @@ public class ShowDialogues : MonoBehaviour
 
     public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
     {
-        if (GetComponent<GlassesQuest>().glasses == false)
+        if (GetComponent<MiettesQuest>().miettes == false)
         {
             if (texte.text == dialoguesSO.dialogues[dialogueLine])
             {
@@ -114,7 +114,7 @@ public class ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<GlassesQuest>().glasses == true)
+        if (GetComponent<MiettesQuest>().miettes == true)
         {
             if (texte.text == dialoguesSO2.dialogues[dialogueLine])
             {
