@@ -12,6 +12,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
     public DialoguesSO dialoguesSO2;
     public int dialogueLine;
     public float textSpeed;
+    public bool miettes;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,7 +36,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        if (GetComponent<MiettesQuest>().miettes == false)
+        if (miettes == false)
         {
             foreach (char c in dialoguesSO.dialogues[dialogueLine].ToCharArray())
             {
@@ -44,7 +45,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<MiettesQuest>().miettes == true)
+        if (miettes == true)
         {
             foreach (char c in dialoguesSO2.dialogues[dialogueLine].ToCharArray())
             {
@@ -64,7 +65,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
 
     public void NextLine()
     {
-        if (GetComponent<MiettesQuest>().miettes == false)
+        if (miettes == false)
         {
             if (dialogueLine < dialoguesSO.dialogues.Length - 1)
             {
@@ -79,7 +80,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<MiettesQuest>().miettes == true)
+        if (miettes == true)
         {
             if (dialogueLine < dialoguesSO2.dialogues.Length - 1)
             {
@@ -100,7 +101,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
 
     public void SelectDialogueOnperformed(InputAction.CallbackContext obj)
     {
-        if (GetComponent<MiettesQuest>().miettes == false)
+        if (miettes == false)
         {
             if (texte.text == dialoguesSO.dialogues[dialogueLine])
             {
@@ -114,7 +115,7 @@ public class Laurent_ShowDialogues : MonoBehaviour
             }
         }
 
-        if (GetComponent<MiettesQuest>().miettes == true)
+        if (miettes == true)
         {
             if (texte.text == dialoguesSO2.dialogues[dialogueLine])
             {
